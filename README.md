@@ -12,7 +12,7 @@ Welcome to the Student ID Card Generator project, designed specifically for SSUE
 
 ## Live Demo
 
-Check out the [Live Web Site](https://your-id-card-generator-url.com) to see the Student ID Card Generator in action!
+Check out the [https://lesson2siab.netlify.app/](https://lesson2siab.netlify.app/) to see the Student ID Card Generator in action!
 
 ## Getting Started
 
