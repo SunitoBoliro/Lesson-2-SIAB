@@ -73,53 +73,7 @@
         <p id="batch_year"></p>
     </div>
 </div>
-<button id="savePdf">Save as PDF</button>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
-<script>
-    const nameElement = document.getElementById("name");
-    const Sdo = document.getElementById("SDo");
-    const dept = document.getElementById("Department");
-    const rollno = document.getElementById("rollno");
-    const enroll = document.getElementById("enroll");
-    const cnicno = document.getElementById("CNIC");
-    const phoneno = document.getElementById("phone");
-    const addressno = document.getElementById("address");
-    const photoImage = document.getElementById("photoImage");
-    const batch_01 = document.getElementById("batch_year");
-
-    let storedValue = [sessionStorage.getItem('studentName')]
-    let already_values = ["guardianName", "department", "rollNo", "enrollNo", "cnicNo", "phoneNo", "address", "batch", "photo"];
-
-
-    for (let i = 0; i < already_values.length; i++) {
-        storedValue.push(sessionStorage.getItem(already_values[i]))
-    }
-
-    console.log(storedValue)
-
-
-    nameElement.textContent += storedValue[0];
-    Sdo.textContent += storedValue[1];
-    dept.textContent += storedValue[2];
-    rollno.textContent += storedValue[3];
-    enroll.textContent += storedValue[4];
-    cnicno.textContent += storedValue[5];
-    phoneno.textContent += storedValue[6];
-    addressno.textContent += storedValue[7];
-    batch_01.textContent += storedValue[8]
-    photoImage.src = storedValue[9];
-
-    document.getElementById("savePdf").addEventListener('click', function () {
-        const idCard = document.querySelector('.id-card'); // Select the id-card element
-
-        // Call the html2pdf library to generate the PDF
-        html2pdf()
-            .set({ margin: 10, filename: 'id_card.pdf', image: { type: 'jpeg', quality: 0.98 }, html2canvas: {scale: 2 }})
-            .from(idCard)
-            .save();
-    });
-
-</script>
+<script src= "id_card.js"></script>
 
 </body>
 </html>
